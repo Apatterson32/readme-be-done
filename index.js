@@ -2,8 +2,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-
-// TODO: Create an array of questions for user input
 inquirer
     .prompt([
         {
@@ -128,10 +126,13 @@ inquirer
     ])
     .then((data) => {
 
+        // if user answers no, it will return an empty string instead of undefined
+        const creditText  = data.credit ? data.creditText : '';
+        const licenseText  = data.license ? data.licenseText : '';
+        const badgeText  = data.badges ? data.badgetText : '';
+
         const readmeContent = `
         # ${data.projectTitle}
-        
-        ${data.descriptionMotiv}
         
         ## Project Description
 
@@ -147,13 +148,18 @@ inquirer
 
         Usage
 
+        Credits
+
         License
+
+        Badges
 
         Contribution 
 
         Tests
 
         Questions
+
 
         # Installation
 
@@ -163,9 +169,17 @@ inquirer
 
         ${data.usageInfo}
 
+        # Credits
+
+        ${creditText}
+
         # License
 
-        ${data.license}
+        ${licenseText}
+
+        # Badges
+
+        ${badgeText}
 
         # Contribution
 

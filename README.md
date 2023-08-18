@@ -1,13 +1,11 @@
 
-        # readmebedone
-        
-        undefined
+        # njdfm
         
         ## Project Description
 
-        create a readme faster
-        efficiency 
-        how to utilize node and newer syntax
+        jndkcsm
+        jndcms
+        njdkcm
 
         # Table of Contents
 
@@ -17,7 +15,11 @@
 
         Usage
 
+        Credits
+
         License
+
+        Badges
 
         Contribution 
 
@@ -25,28 +27,37 @@
 
         Questions
 
+
         # Installation
 
-        install inquirer thru npm
+        jndcm
 
         # Usage
 
-        javascript
+        jfdc
+
+        # Credits
+
+        
 
         # License
 
-        true
+        
+
+        # Badges
+
+        
 
         # Contribution
 
-        they can contribute by blah blah blah
+        rinjsckm
 
         # Tests
 
-        sekijfo;lcm
+        njadvkcms
 
         # Questions
 
-        How can my code be improved?
+        jvkdcm
 
         
