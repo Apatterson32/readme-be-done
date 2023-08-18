@@ -1,11 +1,11 @@
 
-        # njdfm
+        # read me generator
         
         ## Project Description
 
-        jndkcsm
-        jndcms
-        njdkcm
+        generates a readme personalized by user input
+        time management
+        everything
 
         # Table of Contents
 
@@ -30,15 +30,15 @@
 
         # Installation
 
-        jndcm
+        1 2 3 4 5
 
         # Usage
 
-        jfdc
+        js inquirer npm
 
         # Credits
 
-        
+        my mind
 
         # License
 
@@ -46,18 +46,18 @@
 
         # Badges
 
-        
+        idk
 
         # Contribution
 
-        rinjsckm
+        code
 
         # Tests
 
-        njadvkcms
+        test
 
         # Questions
 
-        jvkdcm
+        questin
 
         

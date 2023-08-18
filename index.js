@@ -67,7 +67,7 @@ inquirer
 
         {
             type: 'input',
-            message: 'Enter the name of the license:',
+            message: 'Enter your license:',
             name: 'licenseName',
             when: (answers) => answers.license, // Shows this question only if user confirms having a license
             validate: (input) => {
@@ -86,7 +86,7 @@ inquirer
 
         {
             type: 'input',
-            message: 'Enter the name of the badge(s):',
+            message: 'Enter your badge(s):',
             name: 'badgesName',
             when: (answers) => answers.badges, // Shows this question only if user confirms having badge(s)
             validate: (input) => {
@@ -127,9 +127,9 @@ inquirer
     .then((data) => {
 
         // if user answers no, it will return an empty string instead of undefined
-        const creditText  = data.credit ? data.creditText : '';
-        const licenseText  = data.license ? data.licenseText : '';
-        const badgeText  = data.badges ? data.badgetText : '';
+        const creditName  = data.credit ? data.creditName : '';
+        const licenseName  = data.license ? data.licenseName : '';
+        const badgesName  = data.badges ? data.badgesName : '';
 
         const readmeContent = `
         # ${data.projectTitle}
@@ -171,15 +171,15 @@ inquirer
 
         # Credits
 
-        ${creditText}
+        ${creditName}
 
         # License
 
-        ${licenseText}
+        ${licenseName}
 
         # Badges
 
-        ${badgeText}
+        ${badgesName}
 
         # Contribution
 
@@ -197,8 +197,8 @@ inquirer
     
         
         
-    // })
-// // TODO: Create a function to write README file
+
+ // Create a readme file
 
     fs.writeFile('README.md', readmeContent, (err) => {
         if (err) {
