@@ -69,7 +69,7 @@ inquirer
             type: 'input',
             message: 'Enter your license:',
             name: 'licenseName',
-            when: (answers) => answers.license, // Shows this question only if user confirms having a license
+            when: (answers) => answers.license, 
             validate: (input) => {
               if (input.trim()) {
                 return true;
@@ -88,7 +88,7 @@ inquirer
             type: 'input',
             message: 'Enter your badge(s):',
             name: 'badgesName',
-            when: (answers) => answers.badges, // Shows this question only if user confirms having badge(s)
+            when: (answers) => answers.badges, 
             validate: (input) => {
               if (input.trim()) {
                 return true;
