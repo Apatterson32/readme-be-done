@@ -36,7 +36,7 @@ ${licenseName}
 
 ## Badges
 
-${badgesName}
+${badgesInfo}
 
 ## Contribution
 

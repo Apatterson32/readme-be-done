@@ -38,7 +38,7 @@ inquirer
 
         {
             type: 'input',
-            message: 'Provide usage information ',
+            message: 'Provide steps to use this application',
             name: 'usageInfo',
         },
 
@@ -69,7 +69,7 @@ inquirer
 
         {
             type: 'input',
-            message: 'Enter your license:',
+            message: 'Add license:',
             name: 'licenseName',
             when: (answers) => answers.license, 
             validate: (input) => {
@@ -88,8 +88,8 @@ inquirer
 
         {
             type: 'input',
-            message: 'Enter your badge(s):',
-            name: 'badgesName',
+            message: 'Add badges:',
+            name: 'badgesInfo',
             when: (answers) => answers.badges, 
             validate: (input) => {
               if (input.trim()) {
@@ -97,14 +97,6 @@ inquirer
               }
               return 'Please provide a valid badge name';
             },
-        },
-
-        
-
-        {
-            type: 'input',
-            message: 'Write important features in your project',
-            name: 'features',
         },
 
         {
@@ -121,47 +113,36 @@ inquirer
 
         {
             type: 'input',
-            message: 'Provide questions for future contributors',
+            message: 'Provide your Github profile and your email address',
             name: 'question',
         },
 
     ])
     .then((data) => {
-
-// if user answers no, it will return an empty string instead of undefined
-const creditName  = data.credit ? data.creditName : '';
-const licenseName  = data.license ? data.licenseName : '';
-const badgesName  = data.badges ? data.badgesName : '';
-
-// Generate README content using the template and user input
-const readmeContent = generateReadme(data);
-
+        // Generate README content using the template and user input
+        const readmeContent = generateReadme(data);
     
-        
- // Create a readme file
-
-    fs.writeFile('README.md', readmeContent, (err) => {
-        if (err) {
-        return console.error('Error writing to README.md:', err);
-        } else {
-        console.log("README.md made successfully!");
+        // Create a readme file
+        fs.writeFile('README.md', readmeContent, (err) => {
+          if (err) {
+            return console.error('Error writing to README.md:', err);
+          } else {
+            console.log('README.md created successfully!');
+          }
+        });
+      })
+      .catch((error) => {
+        console.error('Error', error);
+      });
+    
+    // Function to generate README content using the template and user input
+    function generateReadme(data) {
+      const template = fs.readFileSync(templatePath, 'utf-8');
+      const readmeContent = template.replace(/\$\{(\w+)\}/g, (match, key) => {
+        return data[key] || '';
+      });
+      return readmeContent;
     }
-    });
-})
-.catch((error) => {
-    console.error('Error', error);
-});
-
-console.log(readmeContent);
-
-// Function to generate README content using the template and user input
-function generateReadme(data) {
-    const template = fs.readFileSync(templatePath, 'utf-8');
-    const readmeContent = template.replace(/\$\{(\w+)\}/g, (match, key) => {
-      return data[key] || '';
-    });
-    return readmeContent;
-  }
 
 
 // function writeToFile(fileName, data) {}
