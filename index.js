@@ -2,6 +2,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+const templatePath = 'template.md'; // Path to template.md file
+
 inquirer
     .prompt([
         {
@@ -126,78 +128,16 @@ inquirer
     ])
     .then((data) => {
 
-        // if user answers no, it will return an empty string instead of undefined
-        const creditName  = data.credit ? data.creditName : '';
-        const licenseName  = data.license ? data.licenseName : '';
-        const badgesName  = data.badges ? data.badgesName : '';
+// if user answers no, it will return an empty string instead of undefined
+const creditName  = data.credit ? data.creditName : '';
+const licenseName  = data.license ? data.licenseName : '';
+const badgesName  = data.badges ? data.badgesName : '';
 
-        const readmeContent = `
-        # ${data.projectTitle}
-        
-        ## Project Description
+// Generate README content using the template and user input
+const readmeContent = generateReadme(data);
 
-        ${data.descriptionProject}
-        ${data.descriptionSolve}
-        ${data.descriptionLearn}
-
-        # Table of Contents
-
-        Project Description
-
-        Installation
-
-        Usage
-
-        Credits
-
-        License
-
-        Badges
-
-        Contribution 
-
-        Tests
-
-        Questions
-
-
-        # Installation
-
-        ${data.installSteps}
-
-        # Usage
-
-        ${data.usageInfo}
-
-        # Credits
-
-        ${creditName}
-
-        # License
-
-        ${licenseName}
-
-        # Badges
-
-        ${badgesName}
-
-        # Contribution
-
-        ${data.contribution}
-
-        # Tests
-
-        ${data.testExample}
-
-        # Questions
-
-        ${data.question}
-
-        `;
     
         
-        
-
  // Create a readme file
 
     fs.writeFile('README.md', readmeContent, (err) => {
@@ -212,7 +152,16 @@ inquirer
     console.error('Error', error);
 });
 
+console.log(readmeContent);
 
+// Function to generate README content using the template and user input
+function generateReadme(data) {
+    const template = fs.readFileSync(templatePath, 'utf-8');
+    const readmeContent = template.replace(/\$\{(\w+)\}/g, (match, key) => {
+      return data[key] || '';
+    });
+    return readmeContent;
+  }
 
 
 // function writeToFile(fileName, data) {}

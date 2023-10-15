@@ -17,6 +17,7 @@ ${data.descriptionLearn}
 - [Questions](#questions)
 
 
+
 ## Installation
 
 ${data.installSteps}
@@ -27,15 +28,15 @@ ${data.usageInfo}
 
 ## Credits
 
-my mind and the internet and maybe my class
+${creditName}
 
 ## License
 
-This project is licensed under the  license.
+${licenseName}
 
 ## Badges
 
-
+${badgesName}
 
 ## Contribution
 
