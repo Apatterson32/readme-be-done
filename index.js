@@ -57,7 +57,7 @@ inquirer
               if (input.trim()) {
                 return true;
               }
-              return 'Please provide valid credit';
+              return 'Please provide valid credits';
             },
         },
 
@@ -101,7 +101,7 @@ inquirer
 
         {
             type: 'input',
-            message: 'How can others contribute to this project',
+            message: 'If you are accepting contributions, please outline what you would accept.',
             name: 'contribution',
         },
 
@@ -113,8 +113,14 @@ inquirer
 
         {
             type: 'input',
-            message: 'Provide your Github profile and your email address',
-            name: 'question',
+            message: 'Provide your Github profile',
+            name: 'questionGitProfile',
+        },
+
+        {
+        type: 'input',
+            message: 'Provide your email address',
+            name: 'questionEmail',
         },
 
     ])
@@ -148,9 +154,11 @@ inquirer
 // function writeToFile(fileName, data) {}
 // function writeToFile
 // // TODO: Create a function to initialize app
-// function init() {
-
-// }
+  function init() {
+    inquirer.prompt(questions).then((response) => {
+        writeToFile("README.md", generateMarkdown(response));
+    });
+  }
 
 // // Function call to initialize app
 

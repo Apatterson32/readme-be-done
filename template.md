@@ -48,6 +48,8 @@ ${data.testExample}
 
 ## Questions
 
-${data.question}
+${data.questionGitProfile}
+
+${data.questionEmail}
 
         
