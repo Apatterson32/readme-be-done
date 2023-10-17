@@ -81,27 +81,8 @@ inquirer
         },
 
         {
-            type: 'confirm',
-            message: 'Badges?',
-            name: 'badges',
-        },
-
-        {
             type: 'input',
-            message: 'Add badges:',
-            name: 'badgesInfo',
-            when: (answers) => answers.badges, 
-            validate: (input) => {
-              if (input.trim()) {
-                return true;
-              }
-              return 'Please provide a valid badge name';
-            },
-        },
-
-        {
-            type: 'input',
-            message: 'If you are accepting contributions, please outline what you would accept.',
+            message: 'If you are accepting contributions, please outline what you would accept. If not, explain why',
             name: 'contribution',
         },
 
@@ -129,7 +110,7 @@ inquirer
         const readmeContent = generateReadme(data);
     
         // Create a readme file
-        fs.writeFile('README.md', readmeContent, (err) => {
+        fs.writeToFile('README.md', readmeContent, (err) => {
           if (err) {
             return console.error('Error writing to README.md:', err);
           } else {
@@ -141,24 +122,15 @@ inquirer
         console.error('Error', error);
       });
     
-    // Function to generate README content using the template and user input
-    function generateReadme(data) {
-      const template = fs.readFileSync(templatePath, 'utf-8');
-      const readmeContent = template.replace(/\$\{(\w+)\}/g, (match, key) => {
-        return data[key] || '';
+
+    // // TODO: Create a function to initialize app
+    function init() {
+      inquirer.prompt(questions).then((response) => {
+          writeToFile("README.md", generateMarkdown(response));
       });
-      return readmeContent;
     }
 
+    // // Function call to initialize app
 
-// function writeToFile(fileName, data) {}
-// function writeToFile
-// // TODO: Create a function to initialize app
-  function init() {
-    inquirer.prompt(questions).then((response) => {
-        writeToFile("README.md", generateMarkdown(response));
-    });
-  }
-
-// // Function call to initialize app
+    init();
 
