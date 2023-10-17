@@ -1,5 +1,9 @@
 # ${data.projectTitle}
-        
+
+## License
+
+${licenseName}
+
 ## Project Description
 
 ${data.descriptionProject}
@@ -30,14 +34,6 @@ ${data.usageInfo}
 
 ${creditName}
 
-## License
-
-${licenseName}
-
-## Badges
-
-${badgesInfo}
-
 ## Contribution
 
 ${data.contribution}
@@ -48,7 +44,7 @@ ${data.testExample}
 
 ## Questions
 
-${data.questionGitProfile}
+${data.gitProfile}
 
 ${data.questionEmail}
 

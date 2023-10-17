@@ -68,16 +68,20 @@ inquirer
         },
 
         {
-            type: 'input',
-            message: 'Add license:',
+            type: 'list',
+            message: 'Choose license:',
             name: 'licenseName',
-            when: (answers) => answers.license, 
-            validate: (input) => {
-              if (input.trim()) {
-                return true;
-              }
-              return 'Please provide a valid license name';
-            },
+            choices: [{
+              name: 'Apache-License 2.0',
+              name: 'MIT-License',
+              name: 'GNU Public License v3.0',
+              name: 'BSD 2-Clause "Simplified" License',
+              name: 'BSD 3-Clause "New" or "Revised" License',
+              name: 'Boost Software License 1.0',
+              name: 'Creative Commons Zero v1.0 Universal',
+              name: 'Eclipse Public License 2.0',
+              name: 'The Unilicense'
+            }]
         },
 
         {
@@ -95,7 +99,7 @@ inquirer
         {
             type: 'input',
             message: 'Provide your Github profile',
-            name: 'questionGitProfile',
+            name: 'gitProfile',
         },
 
         {
