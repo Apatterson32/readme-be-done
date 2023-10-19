@@ -2,7 +2,65 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const templatePath = 'template.md'; // Path to template.md file
+// Path to the README template file
+const readmeTemplate = 'README.md';
+
+// Function to generate README content
+function generateReadme(data) {
+    return `
+
+# ${data.projectTitle}
+
+## License
+
+${licenseName}
+
+## Project Description
+
+${data.descriptionProject}
+${data.descriptionSolve}
+${data.descriptionLearn}
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Badges](#badges)
+- [Contribution](#contribution)
+- [Tests](#tests)
+- [Questions](#questions)
+
+
+
+## Installation
+
+${data.installSteps}
+
+## Usage
+
+${data.usageInfo}
+
+## Credits
+
+${creditName}
+
+## Contribution
+
+${data.contribution}
+
+## Tests
+
+${data.testExample}
+
+## Questions
+
+${data.gitProfile}
+
+${data.questionEmail}
+`;
+}
+
 
 inquirer
     .prompt([
@@ -110,7 +168,7 @@ inquirer
 
     ])
     .then((data) => {
-        // Generate README content using the template and user input
+        // Generate README content using the template.md file and user input
         const readmeContent = generateReadme(data);
     
         // Create a readme file
@@ -127,14 +185,5 @@ inquirer
       });
     
 
-    // // TODO: Create a function to initialize app
-    function init() {
-      inquirer.prompt(questions).then((response) => {
-          writeToFile("README.md", generateMarkdown(response));
-      });
-    }
 
-    // // Function call to initialize app
-
-    init();
 
