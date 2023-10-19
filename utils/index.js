@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // Path to the README template file
-const readmeTemplate = 'README.md';
+// const readmeTemplate = 'README.md';
 
 // Function to generate README content
 function generateReadme(data) {
@@ -120,12 +120,6 @@ inquirer
         },
 
         {
-            type: 'confirm',
-            message: 'License?',
-            name: 'license',
-        },
-
-        {
             type: 'list',
             message: 'Choose license:',
             name: 'licenseName',
@@ -138,7 +132,8 @@ inquirer
               name: 'Boost Software License 1.0',
               name: 'Creative Commons Zero v1.0 Universal',
               name: 'Eclipse Public License 2.0',
-              name: 'The Unilicense'
+              name: 'The Unilicense',
+              name: 'None',
             }]
         },
 
