@@ -2,18 +2,33 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// Path to the README template file
-const readmeTemplate = 'README.md';
+// Map license names to corresponding user choice using sheilds.io
+const licenseBadges = {
+  'Apache-License-2.0': 'Apache%202.0',
+  'MIT-License': 'MIT',
+  'GNU-Public-License-v3.0': 'GPL-3.0',
+  'BSD-2-Clause-Simplified-License': 'BSD%202-Clause',
+  'BSD-3-Clause-New-or-Revised-License': 'BSD%203-Clause',
+  'Boost-Software-License-1.0': 'BSL-1.0',
+  'Creative-Commons-Zero-v1.0-Universal': 'CC0-1.0',
+  'Eclipse-Public-License-2.0': 'EPL-2.0',
+  'The-Unilicense': 'Unlicense',
+  'None': 'No%20License',
+}
 
 // Function to generate README content
 function generateReadme(data) {
+    // Get the badge for chosen license
+    const licenseBadge = licenseBadges[data.licenseName] || 'Unknown';
     return `
 
 # ${data.projectTitle}
 
 ## License
 
-${data.licenseName}
+[![License](https://img.shields.io/badge/License-${licenseBadge}-brightgreen.svg)](LICENSE)
+
+This project is licensed under the ${data.licenseName} License.
 
 ## Project Description
 
