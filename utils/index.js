@@ -13,7 +13,7 @@ function generateReadme(data) {
 
 ## License
 
-${licenseName}
+${data.licenseName}
 
 ## Project Description
 
@@ -43,7 +43,7 @@ ${data.usageInfo}
 
 ## Credits
 
-${creditName}
+${data.creditName}
 
 ## Contribution
 
@@ -172,7 +172,7 @@ inquirer
         const readmeContent = generateReadme(data);
     
         // Create a readme file
-        fs.writeToFile('README.md', readmeContent, (err) => {
+        fs.writeFile('README.md', readmeContent, (err) => {
           if (err) {
             return console.error('Error writing to README.md:', err);
           } else {
