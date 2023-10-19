@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // Path to the README template file
-// const readmeTemplate = 'README.md';
+const readmeTemplate = 'README.md';
 
 // Function to generate README content
 function generateReadme(data) {
@@ -123,18 +123,18 @@ inquirer
             type: 'list',
             message: 'Choose license:',
             name: 'licenseName',
-            choices: [{
-              name: 'Apache-License 2.0',
-              name: 'MIT-License',
-              name: 'GNU Public License v3.0',
-              name: 'BSD 2-Clause "Simplified" License',
-              name: 'BSD 3-Clause "New" or "Revised" License',
-              name: 'Boost Software License 1.0',
-              name: 'Creative Commons Zero v1.0 Universal',
-              name: 'Eclipse Public License 2.0',
-              name: 'The Unilicense',
-              name: 'None',
-            }]
+            choices: [
+               'Apache-License 2.0',
+               'MIT-License',
+               'GNU Public License v3.0',
+               'BSD 2-Clause "Simplified" License',
+               'BSD 3-Clause "New" or "Revised" License',
+               'Boost Software License 1.0',
+               'Creative Commons Zero v1.0 Universal',
+               'Eclipse Public License 2.0',
+               'The Unilicense',
+               'None',
+            ]
         },
 
         {
