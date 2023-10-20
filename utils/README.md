@@ -1,18 +1,18 @@
 
 
-# my first node.js project
+# ernfm
 
 ## License
 
-[![License](https://img.shields.io/badge/License-Unknown-brightgreen.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-Apache2.0-1.0-brightgreen.svg)](LICENSE)
 
-This project is licensed under the BSD 2-Clause "Simplified" License License.
+This project is licensed under the Creative Commons Zero v1.0 Universal License.
 
 ## Project Description
 
-rjgnsfkm
-gjendfmk
-nrgjdfmkc
+nevfsm
+ienjsm
+jscnm
 
 ## Table of Contents
 - [Installation](#installation)
@@ -28,11 +28,11 @@ nrgjdfmkc
 
 ## Installation
 
-jfdnscm
+jfsvcm
 
 ## Usage
 
-njfmdc
+jenvsmd
 
 ## Credits
 
@@ -40,14 +40,14 @@ undefined
 
 ## Contribution
 
-jgrnfmd
+jf m
 
 ## Tests
 
-njrgdfkmc
+fhdcm
 
 ## Questions
 
-apatterson32
+[GitHub Profile](https://github.com/ifbhcn)
 
-pattersonal10@gmail.com
+[Email](mailto:jdcm)

@@ -4,16 +4,8 @@ const fs = require('fs');
 
 // Map license names to corresponding user choice using sheilds.io
 const licenseBadges = {
-  'Apache-License-2.0': 'Apache%202.0',
-  'MIT-License': 'MIT',
-  'GNU-Public-License-v3.0': 'GPL-3.0',
-  'BSD-2-Clause-Simplified-License': 'BSD%202-Clause',
-  'BSD-3-Clause-New-or-Revised-License': 'BSD%203-Clause',
-  'Boost-Software-License-1.0': 'BSL-1.0',
-  'Creative-Commons-Zero-v1.0-Universal': 'CC0-1.0',
-  'Eclipse-Public-License-2.0': 'EPL-2.0',
-  'The-Unilicense': 'Unlicense',
-  'None': 'No%20License',
+  'MIT License': 'MIT',
+  'The Unilicense': 'Unlicense',
 }
 
 // Function to generate README content
@@ -27,6 +19,7 @@ function generateReadme(data) {
 ## License
 
 [![License](https://img.shields.io/badge/License-${licenseBadge}-brightgreen.svg)](LICENSE)
+
 
 This project is licensed under the ${data.licenseName} License.
 
@@ -70,9 +63,9 @@ ${data.testExample}
 
 ## Questions
 
-${data.gitProfile}
+[GitHub Profile](https://github.com/${data.gitProfile})
 
-${data.questionEmail}
+[Email](mailto:${data.questionEmail})
 `;
 }
 
@@ -139,14 +132,7 @@ inquirer
             message: 'Choose license:',
             name: 'licenseName',
             choices: [
-               'Apache-License 2.0',
                'MIT-License',
-               'GNU Public License v3.0',
-               'BSD 2-Clause "Simplified" License',
-               'BSD 3-Clause "New" or "Revised" License',
-               'Boost Software License 1.0',
-               'Creative Commons Zero v1.0 Universal',
-               'Eclipse Public License 2.0',
                'The Unilicense',
                'None',
             ]
@@ -166,7 +152,7 @@ inquirer
 
         {
             type: 'input',
-            message: 'Provide your Github profile',
+            message: 'Provide your Github username',
             name: 'gitProfile',
         },
 
