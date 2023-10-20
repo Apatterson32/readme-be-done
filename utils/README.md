@@ -1,18 +1,19 @@
 
 
-# ernfm
+# README Generator
 
 ## License
 
-[![License](https://img.shields.io/badge/License-Apache2.0-1.0-brightgreen.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-Apache%20License%202.0-brightgreen.svg)](LICENSE)
 
-This project is licensed under the Creative Commons Zero v1.0 Universal License.
+
+This project is licensed under the Apache-License-2.0 License.
 
 ## Project Description
 
-nevfsm
-ienjsm
-jscnm
+A node.js application that generates a README
+DNLVCM
+JWFCM
 
 ## Table of Contents
 - [Installation](#installation)
@@ -28,11 +29,11 @@ jscnm
 
 ## Installation
 
-jfsvcm
+BJWDC
 
 ## Usage
 
-jenvsmd
+BRJWFKC
 
 ## Credits
 
@@ -40,14 +41,14 @@ undefined
 
 ## Contribution
 
-jf m
+FDCMX
 
 ## Tests
 
-fhdcm
+FDNM
 
 ## Questions
 
-[GitHub Profile](https://github.com/ifbhcn)
+[GitHub Profile](https://github.com/jfsdnmx)
 
-[Email](mailto:jdcm)
+[Email](mailto:hrbfjdnc)

@@ -4,8 +4,10 @@ const fs = require('fs');
 
 // Map license names to corresponding user choice using sheilds.io
 const licenseBadges = {
-  'MIT License': 'MIT',
-  'The Unilicense': 'Unlicense',
+    'Apache-License-2.0': 'Apache%20License%202.0', // Note the spaces are encoded as %20
+    'MIT-License': 'MIT',
+    'The-Unilicense': 'Unlicense',
+    'None': 'None',
 }
 
 // Function to generate README content
@@ -132,9 +134,10 @@ inquirer
             message: 'Choose license:',
             name: 'licenseName',
             choices: [
-               'MIT-License',
-               'The Unilicense',
-               'None',
+                'Apache-License-2.0',
+                'MIT-License',
+                'The-Unilicense',
+                'None',
             ]
         },
 
