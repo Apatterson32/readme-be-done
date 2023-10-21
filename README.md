@@ -60,11 +60,11 @@ A node.js application that generates a professional README. This application rem
 
 ### Deployment Image
 
-![Deployment Image](<img width="912" alt="Screenshot 2023-10-20 183937" src="https://github.com/Apatterson32/readme-be-done/assets/135552416/e6013221-449f-4cbe-aac5-8812b5fb2fec">)
+(<img width="912" alt="Screenshot 2023-10-20 183937" src="https://github.com/Apatterson32/readme-be-done/assets/135552416/e6013221-449f-4cbe-aac5-8812b5fb2fec">)
 
 ### Deployment Video
 
-[Watch Deployment Video]([Untitled_ Oct 20, 2023 6_56 PM.webm](https://github.com/Apatterson32/readme-be-done/assets/135552416/31f5c828-568c-4cf5-953c-6c8598407060))
+([Untitled_ Oct 20, 2023 6_56 PM.webm](https://github.com/Apatterson32/readme-be-done/assets/135552416/31f5c828-568c-4cf5-953c-6c8598407060))
 
 </details>
 
