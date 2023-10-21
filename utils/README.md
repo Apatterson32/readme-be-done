@@ -4,16 +4,16 @@
 
 ## License
 
-[![License](https://img.shields.io/badge/License-Apache%20License%202.0-brightgreen.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
 
 
-This project is licensed under the Apache-License-2.0 License.
+This project is licensed under the MIT-License License.
 
 ## Project Description
 
-A node.js application that generates a README
-DNLVCM
-JWFCM
+A node.js application that generates a professional README file
+time and repetition
+a lot
 
 ## Table of Contents
 - [Installation](#installation)
@@ -29,26 +29,26 @@ JWFCM
 
 ## Installation
 
-BJWDC
+just a few
 
 ## Usage
 
-BRJWFKC
+watch my video!
 
 ## Credits
 
-undefined
+here are some credits
 
 ## Contribution
 
-FDCMX
+not now, this project is just for me
 
 ## Tests
 
-FDNM
+here are some tests
 
 ## Questions
 
-[GitHub Profile](https://github.com/jfsdnmx)
+[GitHub Profile](https://github.com/apatterson32)
 
-[Email](mailto:hrbfjdnc)
+[Email](mailto:pattersonal10@gmail.com)
