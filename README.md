@@ -64,7 +64,7 @@ A node.js application that generates a professional README. This application rem
 
 ### Deployment Video
 
-([Untitled_ Oct 20, 2023 6_56 PM.webm](https://github.com/Apatterson32/readme-be-done/assets/135552416/31f5c828-568c-4cf5-953c-6c8598407060))
+[Untitled_ Oct 20, 2023 6_56 PM.webm](https://github.com/Apatterson32/readme-be-done/assets/135552416/31f5c828-568c-4cf5-953c-6c8598407060)
 
 </details>
 
